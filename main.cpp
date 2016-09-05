@@ -22,12 +22,13 @@ size_t main(size_t argc, char** argv) {
 	std::cout << "\t\t*** Web File Downloader ***\n\n"; 
 	
 	bool reload = true;
-	std::string url("http://www.dracogne.ru");
+	std::string url("");
 
-	std::cout << "Enter URL or 'q' to qiut: ";
+	std::cout << "Enter URL or 'q' to quit: ";
 	std::cin >> url; 
 
 	if(url == "q" || url == "Q") { std::cout << "Exit...\n\n"; return -1; }
+	if(url == "") url = "http://www.dracogne.ru";
 
 	if(argc == 2 && !strcmp(argv[1], "no-reload")) reload = false;
 
